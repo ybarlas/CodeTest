@@ -5,7 +5,9 @@
 Sometimes items cannot be shipped to certain zip codes, and the rules for these restrictions are stored as a series of ranges of 5 digit codes. For example if the ranges are:
 
 
-[94133,94133] [94200,94299] [94600,94699]
+[94133,94133] 
+[94200,94299] 
+[94600,94699]
 
 
 Then the item can be shipped to zip code 94199, 94300, and 65532, but cannot be shipped to 94133, 94650, 94230, 94600, or 94299.
@@ -55,19 +57,18 @@ for example:
 
 if we reduce following zip code ranges.
 
-10030,10040
-
-10030,10035
-10035,10040
-10050,10070
-10060,10065
-10080,10080
-10081,10082
-10095,10099
+[10030,10049]
+[10030,10035]
+[10035,10040]
+[10050,10070]
+[10060,10065]
+[10080,10080]
+[10081,10082]
+[10095,10099]
 
 output will be following 
-10030,10040
-10030,10040
-           [ 10050 , 10070 ]
-           [ 10080 , 10082 ]
-           [ 10095 , 10099 ]
+[10030,10040]
+[10030,10040]
+[10050,10070]
+[10080,10082]
+[10095,10099]
