@@ -73,3 +73,6 @@ output will be following
 [10050,10070]
 [10080,10082]
 [10095,10099]
+
+the core logic is in following method
+com.example.demo.ZipCodeRangeReducer.reduceZipCodeRange
