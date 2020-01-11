@@ -40,4 +40,34 @@ Then the output should be = [94133,94133] [94200,94299] [94600,94699]
 
 If the input = [94133,94133] [94200,94299] [94226,94399]
 
-Then the output should be = [94133,94133] [94200,94399]********
+Then the output should be = [94133,94133] [94200,94399]
+
+
+its Spring boot project for execution of code check out branch and compile , test using maven. 
+see pom.xml for details.
+
+in /src/main/resources folder test01.csv and test02.csv containing input arrays of integer.
+and desire outputs of input files are in same folder test01ans.csv and test02ans.csv file
+
+two unit test execute and read these files for input and desired output.
+
+for example:
+
+if we reduce following zip code ranges.
+
+10030,10040
+
+10030,10035
+10035,10040
+10050,10070
+10060,10065
+10080,10080
+10081,10082
+10095,10099
+
+output will be following 
+10030,10040
+10030,10040
+           [ 10050 , 10070 ]
+           [ 10080 , 10082 ]
+           [ 10095 , 10099 ]
