@@ -18,7 +18,8 @@ public class ZipCodeRangeReducer {
      * 3. compare each zip code from array list with stack top
      * 4. add zip code to stack if not overlap
      * 5. replace stack top if overlap
-     * 6. return all zip codes from stack in an array list.
+     * 6. for removing consecutive zip code set threshold to 1 and test remove consecutive zip codes
+     * 7. return all zip codes from stack in an array list.
      *
      * @param zipCodeList input list of zip codes to reduce to minimum
      * @return reduced ArrayList of type ZipCode
@@ -45,30 +46,7 @@ public class ZipCodeRangeReducer {
                 }
 
             }
-/*
-
-            zipCodeList = new ArrayList<ZipCode>(zipCodeStack);
-
-            zipCodeStack = new Stack<>();
-
-            for(int i = 0; i < zipCodeList.size()-1; i++){
-                ZipCode temp =  zipCodeList.get(i);
-                ZipCode temp2 = zipCodeList.get(i+1);
-
-                if(temp.getEnd()+1 != temp2.getStart()){
-                    zipCodeStack.push(temp);
-                }else{
-                    zipCodeStack.push(new ZipCode(temp.getStart(),temp2.getEnd()));
-                }
-
-            }
-
-*/
-
-
         }
-
         return new ArrayList<ZipCode>(zipCodeStack);
     }
-
 }

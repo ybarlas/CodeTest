@@ -37,8 +37,8 @@ public class DemoApplication implements CommandLineRunner {
 
     public void run(String ... args) {
 
+        /*
         System.out.println("run. . . .");
-
         ArrayList<ZipCode> zipCodeInputList = null;
         try {
             zipCodeInputList = readZipCodes("classpath:input.csv");
@@ -51,13 +51,14 @@ public class DemoApplication implements CommandLineRunner {
         ArrayList<ZipCode> zipCodeReducedList = zipCodeRangeReducer.reduceZipCodeRange(zipCodeInputList, 1);
         System.out.println("Reduced Zip Code List");
         printZipCodeList(zipCodeReducedList);
+        */
     }
 
     /**
      * print all zip codes on console from zipCodeArrayList
      * @param zipCodeArrayList
      */
-    private static void printZipCodeList(ArrayList<ZipCode> zipCodeArrayList){
+    public static void printZipCodeList(ArrayList<ZipCode> zipCodeArrayList){
         zipCodeArrayList.forEach(zipCode -> System.out.println("[ "+zipCode.getStart()+" , "+zipCode.getEnd()+" ]"));
     }
 
@@ -67,7 +68,7 @@ public class DemoApplication implements CommandLineRunner {
      * @return
      * @throws FileNotFoundException
      */
-    private static ArrayList<ZipCode> readZipCodes(String filePath) throws FileNotFoundException {
+    public static ArrayList<ZipCode> readZipCodes(String filePath) throws FileNotFoundException {
         ArrayList<ZipCode> zipCodeRangeList = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(ResourceUtils.getFile(filePath)))) {
             String line = br.readLine();
