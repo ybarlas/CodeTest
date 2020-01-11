@@ -67,6 +67,7 @@ if we reduce following zip code ranges.
 [10095,10099]
 
 output will be following 
+
 [10030,10040]
 [10030,10040]
 [10050,10070]
